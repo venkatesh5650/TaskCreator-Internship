@@ -56,46 +56,55 @@ A modern full-stack task management web application built for **interns and mana
 - Vite for React setup
 
 ---
+### Screenshots
 
-## Installation
+Login Page
 
-1. **Clone the repository**
-```bash
-git clone <repository-url>
+![Login Page](https://res.cloudinary.com/dpiu7mohv/image/upload/v1756987484/Screenshot_2025-09-04_171553_ude3x3.png "Login Page")
 
-Install frontend dependencies
+Register Page
 
-cd client-vite
-npm install
+![Login Page](https://res.cloudinary.com/dpiu7mohv/image/upload/v1756988483/Screenshot_2025-09-04_171606_wtdjds.png "Register Page")
 
+Dashboard – Intern View
 
-Install backend dependencies
+![Login Page](https://res.cloudinary.com/dpiu7mohv/image/upload/v1756988605/Screenshot_2025-09-04_171430_yab6sw.png "Dashboard – Intern View")
 
-cd ../server
-npm install
+Dashboard – Manager View
 
+![Login Page](https://res.cloudinary.com/dpiu7mohv/image/upload/v1756988711/Screenshot_2025-09-04_171536_bd4y3n.png "Dashboard – Manager View")
 
-Setup environment variables
+Interns List Page
+
+![Login Page](https://res.cloudinary.com/dpiu7mohv/image/upload/v1756988760/Screenshot_2025-09-04_172127_kitupz.png "Interns List Page")
+
+---
+
+## Install frontend dependencies
+   cd client-vite
+   npm install
+
+## Install backend dependencies
+  cd ../server
+   npm install
+
+## Setup environment variables
 
 Create a .env file in the server folder:
 
 JWT_SECRET=your_jwt_secret
 
-
 Run the backend server
-
 npm start
 
-
 Run the frontend
-
 cd ../client-vite
 npm run dev
 
 
 Open your browser at the URL provided by Vite (usually http://localhost:5173).
 
-Usage
+## Usage
 
 Register a new account as a Manager or Intern.
 
@@ -103,26 +112,27 @@ Login using your credentials.
 
 Managers can:
 
-Create new tasks.
+Create new tasks
 
-Delete tasks.
+Delete tasks
 
-View all interns.
+View all interns
 
-Interns can:
+### Interns can:
 
-View assigned tasks.
+View assigned tasks
 
-Update the status of tasks.
+Update the status of tasks
 
 API Endpoints
-Authentication
+
+### Authentication
 
 POST /auth/register – Register a new user (intern or manager)
 
 POST /auth/login – Login and receive JWT token, role, and user ID
 
-Tasks
+### Tasks
 
 GET /tasks – Fetch all tasks (Manager) or assigned tasks (Intern)
 
@@ -132,12 +142,13 @@ PUT /tasks/:id/status – Update task status (Intern for assigned tasks, Manager
 
 DELETE /tasks/delete/:id – Delete a task (Manager only)
 
-Interns
+### Interns
 
 GET /tasks/interns – Fetch all registered interns (Manager only)
+---
+## Folder Structure
 
-Folder Structure
-
+```
 project-root/
 │
 ├── client-vite/        # Frontend React app
@@ -155,12 +166,4 @@ project-root/
     ├── database/
     ├── middleware/
     └── package.json
-
-
-
-
-
----
-
-
-
+```
